@@ -31,7 +31,9 @@ const HeroSection = () => {
               <Image
                 src="/guillaume-rot.png"
                 alt="Guillaume Rot Portrait"
-                fill
+                // fill
+                width={400}
+                height={400}
                 className="object-cover rounded-2xl transform transition-transform hover:scale-105 duration-300"
                 priority
               />
