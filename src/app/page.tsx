@@ -8,7 +8,7 @@ export default function Home() {
       <nav className="fixed w-full top-0 z-50 bg-primary/90 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-accent">
-            VN
+            GR
           </Link>
           <div className="hidden md:flex gap-8">
             <Link

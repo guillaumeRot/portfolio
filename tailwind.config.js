@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         primary: "#121212", // Fond principal
         secondary: "#1E1E1E", // Fond des cartes
-        accent: "#00F0FF", // Nouvelle couleur d'accent (bleu néon)
+        accent: "#60A5FA", // Nouvelle couleur d'accent (bleu ciel)
         text: {
           primary: "#E2E2E2", // Texte principal
           secondary: "#909090", // Texte secondaire
