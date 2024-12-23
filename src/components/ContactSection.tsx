@@ -1,5 +1,6 @@
 "use client";
 
+import emailjs from "@emailjs/browser";
 import { useEffect, useState } from "react";
 
 const ContactSection = () => {
@@ -39,15 +40,24 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Ici, vous pouvez ajouter votre logique d'envoi de formulaire
-    // Par exemple, avec une API ou un service d'emails
-
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: "Guillaume Rot",
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
       alert("Message envoyé avec succès!");
       setFormData({ name: "", email: "", message: "" });
-    } catch {
-      alert("Une erreur est survenue");
+    } catch (error) {
+      console.error("FAILED...", error);
+      alert("Une erreur est survenue lors de l'envoi du message");
     } finally {
       setIsSubmitting(false);
     }
