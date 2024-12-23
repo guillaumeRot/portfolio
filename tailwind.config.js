@@ -17,6 +17,16 @@ module.exports = {
         },
         hover: "#2A2A2A", // Couleur de survol
       },
+      fontFamily: {
+        // Style 1: Moderne et léger
+        sans: ["Inter", "sans-serif"],
+
+        // Style 2: Élégant
+        display: ["Montserrat", "sans-serif"],
+
+        // Style 3: Bold et impactant
+        heading: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

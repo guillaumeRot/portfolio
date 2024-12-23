@@ -24,56 +24,37 @@ const Navigation = () => {
                         : "bg-transparent py-6"
                     }`}
     >
-      <div className="max-w-6xl mx-auto px-8 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl font-bold text-accent hover:text-accent/80 transition-colors"
-        >
-          GR
-        </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8">
-          <Link href="#projets" className="hover:text-accent transition-colors">
-            Projets
-          </Link>
-          <Link href="#apropos" className="hover:text-accent transition-colors">
-            À propos
-          </Link>
-          <Link
-            href="#competences"
-            className="hover:text-accent transition-colors"
-          >
-            Compétences
-          </Link>
-          <Link href="#contact" className="hover:text-accent transition-colors">
-            Contact
-          </Link>
+      <div className="max-w-6xl mx-auto px-8 flex justify-center items-center border-b border-accent/20">
+        <div className="hidden md:flex gap-12 font-medium tracking-[0.2em] text-xs uppercase">
+          {["Projets", "À propos", "Compétences", "Contact"].map((item) => (
+            <Link
+              key={item}
+              href={`#${item.toLowerCase().replace("à ", "")}`}
+              className="relative py-2 hover:text-accent transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300"
+            >
+              {item}
+            </Link>
+          ))}
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-accent hover:text-accent/80 transition-colors"
-          onClick={() => {
-            /* Ajouter la logique du menu mobile ici */
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
       </div>
+
+      {/* Mobile Menu Button (conservé pour tous les styles) */}
+      <button className="md:hidden absolute right-8 text-accent hover:text-accent/80 transition-colors">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
     </nav>
   );
 };

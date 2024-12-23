@@ -49,32 +49,46 @@ const HeroSection = () => {
                               : "translate-y-10 opacity-0"
                           }`}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <div className="mb-8">
+              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-md md:text-2xl">
+                Bonjour, je suis Guillaume Rot
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-8">
               <span className="text-text-primary block mb-2">Développeur</span>
-              <span className="text-accent">Full Stack</span>
+              <span className="text-accent">Java / React</span>
             </h1>
 
-            <p
-              className="text-text-secondary max-w-xl text-lg mb-8 
-                         transition-all duration-1000 delay-300
-                         ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}"
-            >
-              Je crée des applications web modernes et performantes
-            </p>
+            <div className="flex gap-4">
+              <Link
+                href="#contact"
+                className={`inline-block border-2 border-accent text-accent px-8 py-3 rounded-full 
+                           hover:bg-accent hover:text-primary transition-all duration-300
+                           transform transition-all duration-200 delay-50
+                           ${
+                             isVisible
+                               ? "translate-y-0 opacity-100"
+                               : "translate-y-10 opacity-0"
+                           }`}
+              >
+                Me contacter
+              </Link>
 
-            <Link
-              href="#contact"
-              className={`inline-block bg-accent text-primary px-8 py-3 rounded-full 
-                         hover:bg-accent/90 transition-all duration-300
-                         transform transition-all duration-1000 delay-500
-                         ${
-                           isVisible
-                             ? "translate-y-0 opacity-100"
-                             : "translate-y-10 opacity-0"
-                         }`}
-            >
-              Me contacter
-            </Link>
+              <Link
+                href="/cv-guillaume-rot.pdf"
+                target="_blank"
+                className={`inline-block border-2 border-accent text-accent px-8 py-3 rounded-full 
+                           hover:bg-accent hover:text-primary transition-all duration-300
+                           transform transition-all duration-200 delay-50
+                           ${
+                             isVisible
+                               ? "translate-y-0 opacity-100"
+                               : "translate-y-10 opacity-0"
+                           }`}
+              >
+                Télécharger mon CV
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -140,12 +140,57 @@ const ContactSection = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`bg-accent text-primary px-8 py-3 rounded-full 
-                     hover:bg-accent/90 transition-all duration-300
-                     disabled:opacity-50 disabled:cursor-not-allowed
-                     transform hover:-translate-y-1`}
+            className={`inline-flex items-center justify-center gap-2 px-8 py-3 
+                       bg-gradient-to-r from-accent/10 to-accent/5
+                       text-accent
+                       rounded-xl
+                       transition-all duration-300
+                       hover:from-accent hover:to-accent hover:text-primary
+                       disabled:opacity-50 disabled:cursor-not-allowed`}
           >
-            {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+            {isSubmitting ? (
+              <>
+                <svg
+                  className="animate-spin h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  />
+                </svg>
+                <span>Envoi en cours...</span>
+              </>
+            ) : (
+              <>
+                <span>Envoyer le message</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </>
+            )}
           </button>
         </form>
 
@@ -159,7 +204,7 @@ const ContactSection = () => {
                         }`}
         >
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/guillaumeRot"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-secondary hover:text-accent transition-colors"
@@ -175,7 +220,7 @@ const ContactSection = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/guillaume-rot/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-secondary hover:text-accent transition-colors"
