@@ -96,7 +96,8 @@ const HeroSection = () => {
         <div
           className={`absolute bottom-8 left-1/2 transform -translate-x-1/2
                         transition-all duration-1000 delay-700
-                        ${isVisible ? "opacity-100" : "opacity-0"}`}
+                        ${isVisible ? "opacity-100" : "opacity-0"}
+                        hidden md:block`}
         >
           <div className="animate-bounce">
             <svg

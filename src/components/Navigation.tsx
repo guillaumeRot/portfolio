@@ -15,7 +15,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-6">
-      <div className="max-w-6xl mx-auto px-8 flex justify-center items-center border-b border-accent/20">
+      <div className="max-w-6xl mx-auto px-8 flex justify-center items-center md:border-b md:border-accent/20">
         <div className="hidden md:flex gap-12 font-medium tracking-[0.2em] text-xs uppercase">
           {menuItems.map((item) => (
             <Link
