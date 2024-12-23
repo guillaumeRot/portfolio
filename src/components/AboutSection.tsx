@@ -5,19 +5,6 @@ import { useEffect, useState } from "react";
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const skills = [
-    { name: "TypeScript", category: "Frontend" },
-    { name: "React", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "Java", category: "Backend" },
-    { name: "Spring Boot", category: "Backend" },
-    { name: "PostgreSQL", category: "Backend" },
-    { name: "MongoDB", category: "Backend" },
-    { name: "Git", category: "Outils" },
-    { name: "Docker", category: "Outils" },
-    { name: "Gitlab CI", category: "Outils" },
-  ];
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -89,78 +76,6 @@ const AboutSection = () => {
                 création de solutions innovantes adaptées aux besoins métiers.
               </p>
             </div>
-          </div>
-
-          {/* Skills avec animation */}
-          <div
-            className={`transform transition-all duration-700 delay-300
-                       ${
-                         isVisible
-                           ? "translate-y-0 opacity-100"
-                           : "translate-y-10 opacity-0"
-                       }`}
-          >
-            <h3 className="text-xl font-semibold text-accent mb-8 text-center">
-              Technologies principales
-            </h3>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {skills.map((skill, index) => (
-                <div
-                  key={skill.name}
-                  className="group relative"
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="absolute inset-0 bg-accent/5 rounded-xl blur group-hover:bg-accent/10 transition-colors duration-300" />
-                  <div
-                    className="relative bg-secondary/30 backdrop-blur-sm border border-accent/10 
-                                rounded-xl p-4 hover:border-accent/30 transition-all duration-300"
-                  >
-                    <div className="text-sm text-accent/60 mb-1">
-                      {skill.category}
-                    </div>
-                    <div className="font-medium">{skill.name}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Call to action */}
-          <div
-            className={`text-center transform transition-all duration-700 delay-500
-                       ${
-                         isVisible
-                           ? "translate-y-0 opacity-100"
-                           : "translate-y-10 opacity-0"
-                       }`}
-          >
-            <a
-              href="/cv-guillaume-rot.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-xl 
-                       bg-accent/10 hover:bg-accent/20 text-accent
-                       border border-accent/20 hover:border-accent/40 
-                       transition-all duration-300"
-            >
-              <span>Télécharger mon CV</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
