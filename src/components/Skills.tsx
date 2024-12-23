@@ -24,7 +24,7 @@ const Skills = () => {
   };
 
   const SkillBadge = ({ name, logo }: { name: string; logo: string }) => (
-    <div className="group relative">
+    <div id="competences" className="group relative">
       <div className="absolute inset-0 bg-accent/20 blur-xl rounded-full group-hover:bg-accent/30 transition-all duration-300" />
       <div
         className="relative bg-secondary border border-accent/20 backdrop-blur-sm 
