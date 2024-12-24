@@ -12,8 +12,12 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center px-8">
+    <section
+      aria-label="Introduction"
+      className="min-h-screen flex items-center px-8"
+    >
       <div className="max-w-6xl mx-auto w-full">
+        <h1 className="sr-only">Guillaume Rot - Développeur Java & React</h1>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Image Container */}
           <div
@@ -30,8 +34,7 @@ const HeroSection = () => {
             <div className="relative rounded-2xl overflow-hidden aspect-square">
               <Image
                 src="/guillaume-rot.png"
-                alt="Guillaume Rot Portrait"
-                // fill
+                alt="Guillaume Rot - Développeur Fullstack Java & React"
                 width={400}
                 height={400}
                 className="object-cover rounded-2xl transform transition-transform hover:scale-105 duration-300"
