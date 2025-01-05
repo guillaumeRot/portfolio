@@ -8,24 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#121212", // Fond principal
-        secondary: "#1E1E1E", // Fond des cartes
-        accent: "#60A5FA", // Nouvelle couleur d'accent (bleu ciel)
+        primary: "#0A1929", // Fond principal plus foncé avec une teinte bleue
+        secondary: "#0F2942", // Fond secondaire assorti
+        accent: "#00A3D5", // Votre bleu principal
         text: {
           primary: "#E2E2E2", // Texte principal
-          secondary: "#909090", // Texte secondaire
+          secondary: "#94A3B8", // Texte secondaire avec une teinte bleue
         },
-        hover: "#2A2A2A", // Couleur de survol
+        hover: "#163A5C", // Couleur de survol assortie
       },
-      fontFamily: {
-        // Style 1: Moderne et léger
-        sans: ["Inter", "sans-serif"],
-
-        // Style 2: Élégant
-        display: ["Montserrat", "sans-serif"],
-
-        // Style 3: Bold et impactant
-        heading: ["Poppins", "sans-serif"],
+      backgroundColor: {
+        "accent-light": "#00B3E5", // Version plus claire pour les hovers
+        "accent-dark": "#008DBB", // Version plus foncée pour les états actifs
       },
     },
   },
