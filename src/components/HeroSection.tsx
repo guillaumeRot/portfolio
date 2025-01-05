@@ -34,7 +34,7 @@ const HeroSection = () => {
             <div className="relative rounded-2xl overflow-hidden aspect-square">
               <Image
                 src="/guillaume-rot.png"
-                alt="Guillaume Rot - Développeur Fullstack Java & React"
+                alt="Guillaume Rot - Développeur Fullstack Java & React à Rennes"
                 width={400}
                 height={400}
                 className="object-cover rounded-2xl transform transition-transform hover:scale-105 duration-300"

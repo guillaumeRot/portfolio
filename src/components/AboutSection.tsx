@@ -59,8 +59,8 @@ const AboutSection = () => {
 
             <div className="space-y-6 text-text-secondary leading-relaxed">
               <p>
-                Bonjour ! Développeur expérimenté depuis plus de 7 ans et issu
-                d&apos;une école d&apos;ingénieur, j&apos;ai eu
+                Bonjour ! Développeur expérimenté depuis plus de 7 ans, basé à
+                Rennes et issu d&apos;une école d&apos;ingénieur, j&apos;ai eu
                 l&apos;opportunité de travailler dans des secteurs variés tels
                 que la banque, la santé, et l&apos;agroalimentaire.
               </p>
