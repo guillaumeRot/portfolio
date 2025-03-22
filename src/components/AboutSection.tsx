@@ -57,7 +57,7 @@ const AboutSection = () => {
             <div className="absolute top-0 left-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10" />
 
-            <div className="space-y-6 text-text-secondary leading-relaxed">
+            <div className="space-y-6 text-white/90 leading-relaxed">
               <p>
                 Bonjour ! Développeur expérimenté depuis plus de 7 ans, basé à
                 Rennes et issu d&apos;une école d&apos;ingénieur, j&apos;ai eu

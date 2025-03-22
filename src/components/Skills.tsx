@@ -27,7 +27,7 @@ const Skills = () => {
     <div id="competences" className="group relative">
       <div className="absolute inset-0 bg-accent/20 blur-xl rounded-full group-hover:bg-accent/30 transition-all duration-300" />
       <div
-        className="relative bg-secondary border border-accent/20 backdrop-blur-sm 
+        className="relative bg-[#004aad] border border-accent/20 backdrop-blur-sm 
                     px-8 py-8 rounded-2xl text-center
                     hover:border-accent/40 transform hover:-translate-y-1
                     transition-all duration-300"
@@ -54,7 +54,7 @@ const Skills = () => {
     items: Array<{ name: string; logo: string }>;
   }) => (
     <div>
-      <h3 className="text-xl font-semibold mb-8 text-accent">{title}</h3>
+      <h3 className="text-xl font-semibold mb-8 text-white/80">{title}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {items.map((skill) => (
           <SkillBadge key={skill.name} {...skill} />

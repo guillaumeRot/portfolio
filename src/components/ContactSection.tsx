@@ -87,7 +87,7 @@ const ContactSection = () => {
         </h2>
 
         <p
-          className={`text-text-secondary mb-12 transform transition-all duration-700 delay-200
+          className={`text-white/90 mb-12 transform transition-all duration-700 delay-200
                       ${
                         isVisible
                           ? "translate-y-0 opacity-100"
@@ -116,7 +116,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 placeholder="Votre nom"
                 required
-                className="w-full px-4 py-3 bg-secondary rounded-lg focus:outline-none focus:ring-2 
+                className="w-full px-4 py-3 bg-secondary/50 backdrop-blur-sm rounded-lg focus:outline-none focus:ring-2 
                          focus:ring-accent text-text-primary placeholder-text-secondary"
               />
             </div>
@@ -128,7 +128,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 placeholder="Votre email"
                 required
-                className="w-full px-4 py-3 bg-secondary rounded-lg focus:outline-none focus:ring-2 
+                className="w-full px-4 py-3 bg-secondary/50 backdrop-blur-sm rounded-lg focus:outline-none focus:ring-2 
                          focus:ring-accent text-text-primary placeholder-text-secondary"
               />
             </div>
@@ -142,7 +142,7 @@ const ContactSection = () => {
               placeholder="Votre message"
               required
               rows={6}
-              className="w-full px-4 py-3 bg-secondary rounded-lg focus:outline-none focus:ring-2 
+              className="w-full px-4 py-3 bg-secondary/50 backdrop-blur-sm rounded-lg focus:outline-none focus:ring-2 
                        focus:ring-accent text-text-primary placeholder-text-secondary resize-none"
             />
           </div>
@@ -151,7 +151,7 @@ const ContactSection = () => {
             type="submit"
             disabled={isSubmitting}
             className={`inline-flex items-center justify-center gap-2 px-8 py-3 
-                       bg-gradient-to-r from-accent/10 to-accent/5
+                       bg-white
                        text-accent
                        rounded-xl
                        transition-all duration-300
@@ -217,7 +217,7 @@ const ContactSection = () => {
             href="https://github.com/guillaumeRot"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-text-secondary hover:text-accent transition-colors"
+            className="text-white hover:text-[#004aad] transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@ const ContactSection = () => {
             href="https://www.linkedin.com/in/guillaume-rot/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-text-secondary hover:text-accent transition-colors"
+            className="text-white hover:text-[#004aad] transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

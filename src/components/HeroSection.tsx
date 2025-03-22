@@ -53,20 +53,21 @@ const HeroSection = () => {
                           }`}
           >
             <div className="mb-8">
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-md md:text-2xl">
+              {/* <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-md md:text-2xl"> */}
+              <span className="bg-white/20 text-white px-4 py-2 rounded-full text-md md:text-2xl">
                 Bonjour, je suis Guillaume Rot
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-8">
               <span className="text-text-primary block mb-2">Développeur</span>
-              <span className="text-accent">Java / React</span>
+              <span className="text-[#5de0e6]">Java / React</span>
             </h1>
 
             <div className="flex gap-4">
               <Link
                 href="#contact"
-                className={`inline-block border-2 border-accent text-accent px-8 py-3 rounded-full 
-                           hover:bg-accent hover:text-primary transition-all duration-300
+                className={`inline-block border-2 border-white text-white px-8 py-3 rounded-full 
+                           hover:bg-white hover:text-[#004aad] transition-all duration-300
                            transform transition-all duration-200 delay-50
                            ${
                              isVisible
@@ -80,8 +81,8 @@ const HeroSection = () => {
               <Link
                 href="/cv-guillaume-rot.pdf"
                 target="_blank"
-                className={`inline-block border-2 border-accent text-accent px-8 py-3 rounded-full 
-                           hover:bg-accent hover:text-primary transition-all duration-300
+                className={`inline-block border-2 border-white text-white px-8 py-3 rounded-full 
+                           hover:bg-white hover:text-[#004aad] transition-all duration-300
                            transform transition-all duration-200 delay-50
                            ${
                              isVisible
@@ -105,7 +106,7 @@ const HeroSection = () => {
           <div className="animate-bounce">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-accent"
+              className="h-6 w-6 text-[#5de0e6]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
