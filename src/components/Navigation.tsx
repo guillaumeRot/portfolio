@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,15 +13,30 @@ const Navigation = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-6">
-      <div className="max-w-6xl mx-auto px-8 flex justify-center items-center md:border-b md:border-accent/20">
+    <nav
+      className={`fixed w-full top-0 z-50 transition-all duration-300 py-6 ${
+        isScrolled ? "bg-white/10 backdrop-blur-md" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-8 flex justify-center items-center md:border-b md:border-white/20">
         <div className="hidden md:flex gap-12 font-medium tracking-[0.2em] text-xs uppercase">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="relative py-2 hover:text-accent transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300"
+              className="relative py-2 text-white hover:text-white/80 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
             >
               {item.name}
             </Link>
@@ -30,7 +45,7 @@ const Navigation = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden absolute right-8 text-accent hover:text-accent/80 transition-colors"
+          className="md:hidden absolute right-8 text-white hover:text-white/80 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
